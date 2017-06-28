@@ -1,0 +1,40 @@
+\section{Completing the Data}
+\label{sec:completedata}
+\subsection{Coordinates of Establishments}
+\label{sec:completeloc}
+
+\noindent To find the locations of the establishments the credit card data of all employees with a company vehicle is studied in closer detail. As the tracking software only gives data while the vehicle is moving there is often no data given for the minute in which the transaction takes place. This can be explained by people parking their vehicle, then using their card, before returning and driving away.  To find the coordinates of the establishment the closest time either side of the transaction is recorded and the corresponding coordinates recorded and averaged to give the coordinates of the establishment. This is repeated for all transactions made by employees with company vehicles allowing a set of coordinates to be found for each identified location. This allows outliers to be removed and give more accurate coordinates for the establishment. This error could be produced by a number of factors. As already mentioned the different resolutions may produce error, another source of error could be produced by people parking their vehicle away from the establishment and walking. 
+ 
+ \subsection{Identifying Truck Drivers}
+ 
+This method only allows the coordinates of some establishments to be found. This is because certain establishments are only visited by employees without a company vehicle or by employees driving a company truck. To overcome this problem the trucks need to be linked to an employee. The data gives the names of all employees that use a truck but does not say which truck they use.
+The credit card transactions, by employees in a truck, at known establishments are used to find which truck is at that establishment.
+The complete truck allocation is shown in Table \ref{table:truck_drivers}. This additional information allows the coordinates for the remaining establishments to be found.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Vehicle ID & First Name & Last Name \\ \hline \hline
+
+36 &Albina & Hafon\\ \hline
+36&Benito& Hawelon\\ \hline
+36&Claudio& Hawelon\\ \hline
+37&Henk&Mies \\ \hline
+38&Valeria&Morlun \\ \hline
+39&Irene& Nant\\ \hline
+39&Dylan& Scozzese\\ \hline
+40&Adan& Morlun\\ \hline
+40&Cecilia& Morluniau\\ \hline
+
+
+\end{tabular}
+\caption{\label{table:truck_drivers}Vehicle ID numbers matched to employees.}
+\end{center}
+\end{table}
+
+
+	
+	
+	
+	

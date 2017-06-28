@@ -1,0 +1,83 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx} 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[sort, numbers]{natbib} %Use bibtex package
+\usepackage{url}
+\usepackage{}
+\usepackage{float}
+\bibliographystyle{unsrtnat}
+\renewcommand{\bibsection}{} %Remove default bibliography title
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\title{\huge GPS Journeys}
+
+\begin{document}
+
+% Title
+%\HRule \\[0.4cm]
+%{ \huge \bfseries GPS Journeys \\[0.4cm] }
+
+%\HRule \\[1.5cm]
+
+%\textsc{\Huge GPS Journeys}\\[1.5cm]
+
+
+
+
+\author{Jack Crago, Ben Goss, \\ Megan Harrison and Sarah Pulfrey-Taylor}
+
+\date{\today}
+
+%\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+
+This project presents methods of analysing GPS data used in finding unusual behaviours in tracking data of employees from a company called GAStech.. 
+%what is done in the report
+Methods to improve imperfect data are used, as the supplied data has missing entries. This report also produces results from clustering the data to find unusual behaviours by the employees. The GPS data is  split in to journeys, and each journey is analysed to identify which show normal behaviours and which are unusual. The journeys are  analysed to find the probabilites of an employee travelling from one location to another, which is used to predict their next movement.  
+
+
+
+\end{abstract}
+
+\pagenumbering{gobble}
+\clearpage
+
+\tableofcontents
+\pagenumbering{gobble}
+\clearpage
+
+\pagenumbering{arabic}
+
+\input{./Introduction.tex}
+
+\input{./Interpreting_data.tex}
+
+\input{./Completing_the_Data.tex}
+
+\input{./Displacement_analysis.tex}
+
+\input{./Journey_Analysis.tex}
+
+\input{./Correlate.tex}
+
+\input{./employeeprediction.tex}
+
+\input{./Conclusion.tex}
+
+\input{./Further_analysis.tex}
+
+\section{References}
+
+\bibliography{References}
+
+\end{document}

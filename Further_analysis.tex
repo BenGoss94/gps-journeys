@@ -1,0 +1,28 @@
+\section{Further Development}
+\label{sec:furtherdevelop}
+%Checked this. i'm happy with it. SPT
+
+\subsection{Credit Card Outliers}
+\noindent The outliers identified when matching the vehicle tracking data and credit card data could be investigated further. Although these outliers may be the result of inaccuracies in the data they may show other interesting patterns or unusual behaviours by the employees. 
+
+\subsection{Journey analysis}
+To find more patterns in the journey data the small clusters could be analysed to find individuals making unique journeys. The journeys for each individual could also be analysed to find any routines shown by individuals, this would allow any change in this routine to be identified as an anomaly.
+
+\subsection{Prediction}
+In order to predict the location change of an employee more accurately, the simple model can be made more elaborate. 
+
+\subsubsection{Second Order Markov Model}
+The first way of making the model more complex is to use a Second Order Markov Assumption, as shown in Equation \ref{eq:markovassumpt2} below. 
+
+\begin{equation}\label{eq:markovassumpt2}P(l_n | l_{n-1}, l_{n-2}, ...)\approx P(l_n | l_{n-1}, l_{n-2})\end{equation}
+
+\noindent This assumption makes the model more accurate, and also more complex, as the model takes previous behaviour into account more, but it also means that the amount of probabilities needed to be calculated increases to the power of 3. This causes more computing power to be needed, and also makes the results more complicated to analyse.
+
+
+%%JACK, GOT BACK FROM ORCHESTRA AND WORKING ON IT> THOUGHT THIS BIT SHOULD BE JUST COMMENTED OUT, FEEL FREE TO CHANGE IT. SARAH.
+
+
+% \subsubsection{Clustering Peoples Locations}
+% Another modification that can be made to the simple model in order to make the results more realistic is for the clusters of people (known as areas above) to dynamically resize rather than for them to just be a static size. This can be done by various algorithms, including k-means clustering,  explained in Section \ref{sec:kmeans}. If using the k-means, the number of centroids has to be chosen. Then, the points can be clustered using the algorithm. Then, the probability calculation can be used on these clusters, meaning that its more likely to go to certain areas, as each area of dense start and end points is generally found to be a singular cluster rather than split between the areas used in the simple model. 
+\newpage
+
